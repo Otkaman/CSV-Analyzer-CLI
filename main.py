@@ -36,7 +36,7 @@ def main():
     count = readFile(args.file, args.columns)
     parse = parseFile(count)
     writeFile(parse, args.top, args.output)
-    with open ('report.txt', 'r') as new:
+    with open (args.output, 'r') as new:
         for row in new:
             if row.startswith('1.'): return f'Top category:{row[2:]}'
 
