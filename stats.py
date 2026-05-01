@@ -3,7 +3,7 @@ from collections import Counter
 def parseFile(arr):
     return Counter(arr)
 
-def writeFile(dictTop, top = 3, output = 'report.txt'):
+def writeFile(dictTop, top = 5, output = 'report.txt'):
     sumAll = sum(dictTop.values())
     dictTop = dictTop.most_common(top)
     with open(output, 'w') as new:
