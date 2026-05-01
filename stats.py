@@ -12,3 +12,4 @@ def writeFile(dictTop, top = 3, output = 'report.txt'):
         for row in dictTop:
             rowNum += 1
             new.write(f'{rowNum}. {row[0]} - {row[1]*100/sumAll:.2f}%\n')
+    return dictTop

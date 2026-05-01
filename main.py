@@ -34,11 +34,10 @@ def parsed():
 def main():
     args = parsed()
     count = readFile(args.file, args.columns)
-    parse = parseFile(count)
-    writeFile(parse, args.top, args.output)
-    with open (args.output, 'r') as new:
-        for row in new:
-            if row.startswith('1.'): return f'Top category:{row[2:]}'
+    parseData = parseFile(count)
+    top = writeFile(parseData, args.top, args.output)
+    sumAll = sum(parsed_data.values())
+    return f'Top category: {top[0][0]} - {top[0][1] * 100 / sumAll:.2f}%'
 
 
 if __name__ == '__main__':
