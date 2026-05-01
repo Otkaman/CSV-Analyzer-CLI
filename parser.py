@@ -13,7 +13,7 @@ def readFile(file, column = 'category'):
             if column not in reader.fieldnames:
                 raise ColumnNotFoundError(f"'{column}' not in file")
             for row in reader:
-                result.append(row[f'{column}'])
+                result.append(row[column])
 
     except FileNotFoundError:
         raise FileNotFoundError(f'File {file} doesn`t found')

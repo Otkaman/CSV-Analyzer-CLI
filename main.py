@@ -1,4 +1,3 @@
-import sys
 import argparse as ap
 from exceptions import ParseError, ColumnNotFoundError
 from parser import readFile
@@ -47,7 +46,7 @@ def main():
 
 if __name__ == '__main__':
     try:
-        print(main())
+        main()
     except (FileNotFoundError, ParseError, ColumnNotFoundError) as e:
         error(e)
 
