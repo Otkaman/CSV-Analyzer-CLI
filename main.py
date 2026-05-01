@@ -34,11 +34,15 @@ def parsed():
 
 def main():
     args = parsed()
+    info(f'Reading {args.file}...')
     count = readFile(args.file, args.columns)
+    info(f'Analyzing {args.file}...')
     parseData = parseFile(count)
     top = writeFile(parseData, args.top, args.output)
+    info(f'Saving report to {args.output}...')
     sumAll = sum(parseData.values())
-    return f'Top category: {top[0][0]} - {top[0][1] * 100 / sumAll:.2f}%'
+    info(f'Top category: {top[0][0]} - {top[0][1] * 100 / sumAll:.2f}%')
+    success(f'Done! report saved to {args.output}')
 
 
 if __name__ == '__main__':
