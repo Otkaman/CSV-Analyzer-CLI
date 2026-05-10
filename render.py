@@ -1,3 +1,4 @@
+#ANSI color output for terminal
 def success(text):
     print(f'\033[32m {text} \033[0m')
 
