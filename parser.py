@@ -2,7 +2,7 @@ import csv
 from exceptions import ParseError, ColumnNotFoundError
 
 
-def readFile(file, column = 'category'):
+def readFile(file: str, column: str = 'category') -> list[str]:
     result = []
     if not file.endswith('.csv'):
         raise ParseError('File must be .csv')
