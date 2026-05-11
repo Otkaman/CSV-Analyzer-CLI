@@ -1,9 +1,9 @@
 from collections import Counter
 
-def parseFile(arr):
+def parseFile(arr: list[str]) -> Counter:
     return Counter(arr)
 
-def writeFile(dictTop, top = 5, output = 'report.txt'):
+def writeFile(dictTop: Counter[str], top: int = 5, output: str = 'report.txt') -> list[tuple[str, int]]:
     sumAll = sum(dictTop.values())
     dictTop = dictTop.most_common(top)
     with open(output, 'w') as new:
