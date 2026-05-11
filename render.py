@@ -1,9 +1,9 @@
 #ANSI color output for terminal
-def success(text):
+def success(text: str):
     print(f'\033[32m {text} \033[0m')
 
-def error(text):
+def error(text: str):
     print(f'\033[31m Error: {text} \033[0m')
 
-def info(text):
+def info(text: str):
     print(f'\033[34m {text} \033[0m')
