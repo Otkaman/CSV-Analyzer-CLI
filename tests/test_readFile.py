@@ -12,7 +12,7 @@ def test_wrong_extension():
         readFile('../report.txt')
 
 def test_returns_list():
-    assert readFile('file exist.csv') == []
+    assert readFile('./tests/tests_data/file_exist.csv') == ['3','7','6']
 
 
 
